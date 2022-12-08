@@ -1,13 +1,25 @@
 #include <stdio.h>
+
+#include <string.h>
+
 #include <unistd.h>
 
 /**
- * main : Write a C program that prints exactly and that piece of art is useful
+ * main - main block
  *
- * return : return value is always 1
+ * Return: 1
  */
+
 int main(void)
+
 {
-	write(2, "and that piece of art is useful\"- Dora Korpar, 2015-10-19\n", 59);
-	return (0);
+
+	int s;
+
+	s = strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+
+	Write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", s);
+
+	return (1);
+
 }
