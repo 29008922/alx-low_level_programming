@@ -21,6 +21,6 @@ while (x <= 'a')
 
 	x++;
 }
-putchar('\n');
-return (x);
+	putchar('\n');
+	return (0);
 }
