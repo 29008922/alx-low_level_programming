@@ -1,31 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description :program prints alphabet in lowercase followed bya new line
- * Return value: Always 0 (Success)
+ *  main - void
+ *
+ *  Description: a program that prints alphabet using putchar
+ *
+ * Return: Always void (Success/correct)
  */
 
 int main(void)
-
 {
 
-	char z;
+char x;
 
-	z = 'a';
+x = 'a';
 
-	while (z <= 'z')
+while (x <= 'a')
+{
+	putchar(x);
 
-	{
-
-		putchar(z);
-
-		z++;
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+	x++;
+}
+putchar('\n');
+return (x);
 }
