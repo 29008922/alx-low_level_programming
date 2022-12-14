@@ -2,18 +2,19 @@
 
 /**
 *2-print_alphabet_x10- prints alpha 10 times
+*
+*return: void
 */
 
 void print_alphabet_x10(void)
 {
 	int ten;
-	char ba;
+	char la;
 
 	for (ten = 0; ten <= 9; ten++)
 	{
-		for (ba = 'a'; ba <= 'z' ba++)
-		{
+		for (la = 'a'; la <= 'z' la++)
 			_putchar(ba);
-		}	_putchar("\n");
+		_putchar("\n");
 	}
 }
