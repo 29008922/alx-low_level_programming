@@ -1,41 +1,89 @@
-#include"main.h"
+#include "main.h"
 
 /**
-*print_times_table - prints time table of n
+* countd - count how many digits are present in an integer
 *
-*@n: takes number input
+* @n: the integer to count
+*
+* Return: number of digits in @n
+*/
+
+int countd(int n)
+{
+	int c = 0;
+
+	do {
+		n /= 10;
+		c++;
+	} while (n > 0);
+	return (c);
+}
+
+
+/**
+* putspace - _putchar(' ')
+*
+* @n: number of spaces to put
+*
+* Return: void
+*/
+
+void putspace(int n)
+{
+	int i = 0;
+
+	for (; i < n; i++)
+		_putchar(' ');
+}
+
+/**
+* print_times_table - print times table of @n starting from 0
+*
+* @n: an integer
+*
+* Return: void
 */
 
 void print_times_table(int n)
 {
-		int prod, mult, num;
 
-		if (n <= 15 && n >= 0)
-		{
-		for (num = 0; num <= n; ++num)
-		{
-		_putchar(48);
-		for (mult = 1; mult <= n; ++mult)
-		{
-		_putchar(',');
-		_putchar(' ');
-		prod = num * mult;
-		if (prod <= 9)
-		_putchar(' ');
-		if (prod <= 99 >)
-		_putchar(' ');
+	/* rows, columns, multiple */
+	int r, c, m;
 
-		if (prod >= 100)
+	if (n > 15 || n < 0)
+		return;
+	for (r = 0; r <= n; r++)
+	{
+		for (c = 0; c <= n; c++)
+	{
+		m = r * c;
+		if (c == 0)
 		{
-		_putchar((prod / 100) + 48);
-		_putchar((prod / 10) % 10 + 48);
+			_putchar('0');
+			continue;
 		}
-		else if (prod <= 99 && prod >= 100)
-		_putchar((prod / 10) + 48);
-		_putchar((prod % 10) + 48);
+		_putchar(',');
+		switch (countd(m))
+		{
+		case 1:
+			putspace(3);
+			_putchar(48 + (m % 10));
+			break;
+		case 2:
+			putspace(2);
+			_putchar(48 + ((m / 10) % 10));
+			_putchar(48 + (m % 10));
+			break;
+		case 3:
+			putspace(1);
+			_putchar(48 + ((m / 10) / 10));
+			_putchar(48 + ((m / 10) % 10));
+			_putchar(48 + (m % 10));
+			break;
+		default:
+			break;
+			}
 		}
 		_putchar('\n');
-		}
 	}
-
 }
