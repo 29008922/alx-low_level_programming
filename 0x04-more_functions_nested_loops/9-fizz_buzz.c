@@ -1,40 +1,39 @@
 #include <stdio.h>
 
 /**
-* main - entry point
+*main - replace multiples of 3 and 5.
 *
-* Return: void
+*Return: 0.
  */
 
 int main(void)
 {
-int p = 100;
-int i;
+	int i;
 
-i = 1;
-while (i <= p)
-{
-if (i % 3 == 0 && i % 5 == 0)
-{
-printf("FizzBuzz ");
-}
-else if (i % 3 == 0)
-{
-printf("Fizz ");
-}
-else if (i % 5 == 0)
-{
-if (i < p)
-printf("Buzz ")
-else
-printf("Buzz");
-}
-else
-{
-printf("%i ", i);
-}
-i++;
-}
-printf("\n");
-return (0);
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 &&  i % 5 == 0)
+		{
+			printf("%s", "FizzBuzz");
+
+		}
+		else if (i % 3 == 0)
+		{
+			printf("%s", "Fizz");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("%s", "Buzz");
+		}
+		else
+		{
+			printf("%d", i);
+		}
+			if (i != 100)
+			{
+				printf(" ");
+			}
+	}
+	printf("\n");
+	return (0);
 }
