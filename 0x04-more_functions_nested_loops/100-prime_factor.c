@@ -1,33 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
-*main - largest prime facter of 612852475143.
+* main -  checks for checks for a digit (0 through 9)
 *
-*Return: 0
-*/
+* Return: Always 0
+ */
 
 int main(void)
 {
-	long int x, i, pf;
+	long x, y;
 
-	pf = -1;
 	x = 612852475143;
-	while (x % 2 == 0)
+	for (y = 2; x > y; y++)
 	{
-		pf = 2;
-		x = x / 2;
-	}
-	for (i = 3; i <= x / 2; i = i + 2)
-	{
-		while (x % i == 0)
+		while (x % y == 0)
 		{
-			pf = i;
-			x = x / i;
+			x = x / y;
 		}
-	if (x > 2)
-		pf = x;
-	printf("%ld\n", pf);
-	return (0);
 	}
+	printf("%lu", y);
+	putchar('\n');
+	return (0);
 }
