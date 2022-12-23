@@ -9,10 +9,10 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 
-	/*
-	* the program prints a[2] = 98
-	* Remember:
-	* - you are not allowed to use a
+	/**
+	* write your line of code here...
+	* Remember
+	* - you are not allowed to use
 	* - you are not allowed to modify p
 	* - only one statement
 	* - you are not allowed to code anything else than this line of code
