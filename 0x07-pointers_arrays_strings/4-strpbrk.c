@@ -1,29 +1,29 @@
 #include "main.h"
 
 /**
-* _strpbrk - prints the consecutive character os s1 that are in s2.
-* @s: source string
-* @accept: searching string
-*
-* Return: returns new string.
-*/
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: string to be check
+ * @accept: string to check against
+ *
+ * Return: pointer to byte in s that matches or NULL if no match
+ */
+
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j;
+	unsigned int i, j;
 
-	for (i = 0; *(s + 1); i++)
+	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; *(accept + j); j++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (*(s + 1) == *(accept + j))
-			{
+			if (s[i] == accept[j])
 				break;
-			}
-		if (*(accept + j) != '\0')
-		{
-			return (s + i);
 		}
-		}
+		if (accept[j])
+		return (s + i);
 	}
 	return (0);
 }
+
+
+
