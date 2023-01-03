@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * _memset - prints buffer in hexa
- * @s: The array
- * @b: What the array should be filled
- * @n: How many bytes of the array should be filled
- * Return: Nothing.
+ * _memset - function fills the first n bytes of the memory area
+ * pointed to by s with the constant byte b
+ * @s: pointer to the char element
+ * @b: target data
+ * @n: number of index
+ * Return: *s
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int count;
 
-	for (i = 0; i < n; i++)
-	*(s + 1) = b;/*add 1 position s*/
-
+	for (count = 0; count < n; count++)
+	{
+		s[count] = b;
+	}
 	return (s);
 }
