@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *_memset - fill ablock of memory with a specific value
