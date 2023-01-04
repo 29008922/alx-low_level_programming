@@ -1,29 +1,23 @@
 #include "main.h"
 
 /**
- * _strpbrk - searches a string for any of a set of bytes
- * @s: string to be check
- * @accept: string to check against
- *
- * Return: pointer to byte in s that matches or NULL if no match
- */
+*_memset - fills memory with a constant byte.
+*fills the first n bytes of the memory area pointed
+*to by s with the constant b.
+*@s: pointer to memory area.
+*@b: constant to fill memory with.
+*@n: bytes of the memory area to be filled
+*
+*Return: pointer to memory area s.
+*/
 
-char *_strpbrk(char *s, char *accept)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i, j;
+	unsigned int counter;
 
-	for (i = 0; s[i]; i++)
+	for (counter = 0; counter < n; counter++)
 	{
-		for (j = 0; accept[j]; j++)
-		{
-			if (s[i] == accept[j])
-				break;
-		}
-		if (accept[j])
-		return (s + i);
+		s[counter] = b;
 	}
-	return (0);
+	return (s);
 }
-
-
-
