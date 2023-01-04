@@ -1,22 +1,18 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
-*_memset - fill ablock of memory with a specific value
-*@s: starting adress of memory to be filled
-*@b: the desired value
-*@n: number of bytes to changed
+* _memset - copies data
+* @s: the source to copy it to
+* @b: the number of bytes to be overwritten
+* @n: integer variable
 *
-*return: changed array with new value for n bytes
+* Return: Nothing.
 */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
+	unsigned int a;
 
-	for (; n > 0; i++)
-	{
-		s[i] = b;
-		n--;
-	}
+	for (a = 0; a < n; a++)
+		s[a] = b;
 	return (s);
 }
