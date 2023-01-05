@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *_strlen_recusion - length of the string
- *@s: pointer block of memory to fill
- *return: strlen_recursion
+ * _strlen_recursion - returns the length of a string.
+ * @s: string
+ * Return: the length of a string.
  */
 
 int _strlen_recursion(char *s)
