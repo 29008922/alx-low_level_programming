@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 				for (j = 0; av[i][j]; j++, bufferlen++)
 					p[bufferlen] = av[i][j];
 				p[bufferlen] = '\n';
-				bufferlen++
+				bufferlen++;
 			}
 			p[bufferlen] = '\0';
 			return (p);
