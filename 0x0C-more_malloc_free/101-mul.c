@@ -9,8 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned long int;
-	int i, j;
+	int i, j, mul;
 
 	if (argc != 3)
 	{
@@ -28,9 +27,9 @@ int main(int argc, char *argv[])
 			}
 		}
 		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%lu\n", mul);
+		printf("%d\n", mul);
 	}
-	return (mul);
+	return (0);
 }
 
 
