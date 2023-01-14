@@ -1,27 +1,24 @@
 #include "main.h"
 
 /**
-  * _strncpy - copies a string
-  * @dest: destination string
-  * @src: source string
-  * @n: number of bytes to copy
-  * Return: pointer to the resulting string
-  */
+ * _strpbrk - searches a string for any of a set of bytes.
+ * @s: first string.
+ * @accept: second string.
+ * Return: a pointer to the byte in s that matches one of the
+ * bytes in accept, or NULL if no such byte is found.
+ */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strpbrk(char *s, char *accept)
 {
-	int i;
+	unsigned int i, j;
 
-	i = 0;
-	while (src[i] != '\0' && i < n)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		dest[i] = src[i];
-		i++;
+		for (j = 0; *(accept + j) != '\0'; j++)
+		{
+			if (*(s + i) == *(accept + j))
+			return (s + i);
+		}
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return ('\0');
 }
