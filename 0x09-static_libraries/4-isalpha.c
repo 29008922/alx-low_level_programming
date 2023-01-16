@@ -1,10 +1,19 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 
-char *_strpbrk(char *s, char *accept)
+/**
+ * _isalpha - check for alphabets
+ * @c: character that is be alphabet
+ * Return: 1 for alphabets and 0 if not
+ */
+
+int _isalpha(int c)
 {
-	return strpbrk(s, accept);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
