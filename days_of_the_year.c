@@ -4,7 +4,9 @@
 
 int main() 
 {
-	int n = 1;for (; n <= 365; n++)
+	int n = 1;
+
+	for (; n <= 365; n++)
 	printf("%d\t", n);
 	return 0;
 }
