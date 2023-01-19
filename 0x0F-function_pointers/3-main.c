@@ -1,38 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
 
 /**
- * main - the starting function
- * @argc: the number of passed arguments including the program's name
- * @argv: an array whose elements are the passed arguments
+ * main - Entry point
  *
- * Return: Always 0.
+ * @argc: length of command line arguments
+ *
+ * @argv: double pointer to cli arguments
+ *
+ * Return: 0
  */
-int main(int argc, char **argv)
+
+int main(int argc, char *argv[])
 {
-	int x, y;
-	char o;
-	int (*op_func)(int, int);
+	int (*func_ptr)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-	o = *argv[2];
-	op_func = get_op_func(argv[2]);
-	if (!op_func)
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
-	if ((o == '/' || o == '%') && y == 0)
+	func_ptr = get_op_func(argv[2]);
+	if (func_ptr == NULL)
 	{
 		printf("Error\n");
-		return (100);
+		exit(99);
 	}
-	printf("%d\n", op_func(x, y));
+	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
 
