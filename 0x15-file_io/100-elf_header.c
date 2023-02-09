@@ -176,7 +176,9 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
+
 	printf("  Type:                              ");
+
 	switch (e_type)
 	{
 		case ET_NONE:
@@ -201,7 +203,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 /**
  * print_entry - Prints the entry point of an ELF header.
  * @e_entry: The address of the ELF entry point.
- * @e_ident: A pointer to an array containing the ELF class.
+ * 		@e_ident: A pointer to an array containing the ELF class.
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
@@ -245,7 +247,7 @@ void close_elf(int elf)
  * Return: 0 on success
  *
  * Description: If the file is not an ELF File or
- *              the function fails - exit code 98.
+ *the function fails - exit code 98.
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
